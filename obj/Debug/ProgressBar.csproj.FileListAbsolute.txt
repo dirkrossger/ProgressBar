@@ -1,0 +1,4 @@
+H:\Github_Development\ProgressBar\bin\Debug\ProgressBar.dll
+H:\Github_Development\ProgressBar\bin\Debug\ProgressBar.pdb
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.dll
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.pdb
