@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ProgressMeterTest
+namespace ProgressBar
 {
     public class Cmds
     {
@@ -22,6 +22,15 @@ namespace ProgressMeterTest
                 Application.DoEvents();
             }
             pm.Stop();
+        }
+
+        [CommandMethod("PS")]
+        public void ProgressForm()
+        {
+            ProgressBar_progressForm.Form1 form = new ProgressBar_progressForm.Form1();
+            form.ShowDialog();
+            //form.Close();
+            
         }
     }
 }
