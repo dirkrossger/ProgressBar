@@ -28,7 +28,13 @@ namespace ProgressBar
         public void ProgressForm()
         {
             ProgressBar_progressForm.Form1 form = new ProgressBar_progressForm.Form1();
+            form.BackgroundProcess.RunWorkerAsync();
+
             form.ShowDialog();
+            while(form.BackgroundProcess.IsBusy)
+            {
+
+            }
             //form.Close();
             
         }

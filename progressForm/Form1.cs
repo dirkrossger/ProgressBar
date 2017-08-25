@@ -10,9 +10,13 @@ namespace ProgressBar_progressForm
 {
     public partial class Form1 : Form
     {
+        public BackgroundWorker BackgroundProcess;
+
         public Form1()
         {
             InitializeComponent();
+
+            this.BackgroundProcess = backgroundWorker;
 
             label1.Text = "";
 
