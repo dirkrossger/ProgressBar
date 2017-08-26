@@ -32,7 +32,7 @@ namespace App_Dialog
             this.Show();
             backgroundWorker.RunWorkerAsync();
 
-            complete = ExecuteCommand();
+            //complete = ExecuteCommand(); // Hier wird einfach das Command nach der Prozessanzeige ausgeführt - zwecklos !!!
         }
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -40,7 +40,7 @@ namespace App_Dialog
             int i = 0;
             do
             {
-                //complete = ExecuteCommand();
+                complete = ExecuteCommand(); // Konflikt Attempted to read or write protected memory. This is often an indication that other memory is corrupt !!!
                 i++;
                 int percent = i;
                 Thread.Sleep(50);
