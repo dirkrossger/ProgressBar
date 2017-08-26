@@ -8,3 +8,6 @@ H:\GIT-repository\ProgressBar\obj\Debug\ProgressBar.dll
 H:\GIT-repository\ProgressBar\obj\Debug\ProgressBar.pdb
 H:\GIT-repository\ProgressBar\obj\Debug\ProgressBar_progressForm.Form1.resources
 H:\GIT-repository\ProgressBar\obj\Debug\ProgressBar.csproj.GenerateResource.Cache
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar_TaskForm.Form1.resources
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar_progressForm.Form1.resources
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.csproj.GenerateResource.Cache

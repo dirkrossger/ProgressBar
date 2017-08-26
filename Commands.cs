@@ -27,7 +27,7 @@ namespace ProgressBar
         [CommandMethod("PS")]
         public void ProgressForm()
         {
-            ProgressBar_progressForm.Form1 form = new ProgressBar_progressForm.Form1();
+            ProgressBar_TaskForm.Form1 form = new ProgressBar_TaskForm.Form1();
             form.BackgroundProcess.RunWorkerAsync();
 
             form.ShowDialog();
