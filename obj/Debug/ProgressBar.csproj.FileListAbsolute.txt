@@ -11,3 +11,5 @@ H:\Github_Development\ProgressBar\obj\Debug\ProgressBar_TaskForm.Form1.resources
 H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.csproj.GenerateResource.Cache
 H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.dll
 H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.pdb
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.csprojResolveAssemblyReference.cache
+H:\Github_Development\ProgressBar\obj\Debug\ProgressBar.Properties.Resources.resources
