@@ -6,7 +6,7 @@ using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
 using Autodesk.AutoCAD.Runtime;
 
-namespace ProgressBar
+namespace ProgressBar_Dialog
 {
     public class ProgressBar : IExtensionApplication
     {
@@ -14,7 +14,8 @@ namespace ProgressBar
         {
             Document doc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
             doc.Editor.WriteMessage("\n-> Test Autocad ProgressBar: PB");
-            doc.Editor.WriteMessage("\n-> Test WinForm ProgressBar: PS");
+            doc.Editor.WriteMessage("\n-> Test Winform ProgressBar automatically: TB");
+            doc.Editor.WriteMessage("\n-> Test Winform ProgressBar by pushing: START");
         }
 
         public void Terminate()

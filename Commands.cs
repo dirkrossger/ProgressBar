@@ -24,19 +24,18 @@ namespace ProgressBar
             pm.Stop();
         }
 
-        [CommandMethod("PS")]
-        public void ProgressForm()
+        [CommandMethod("TB")]
+        public void TaskForm()
         {
             ProgressBar_TaskForm.Form1 form = new ProgressBar_TaskForm.Form1();
-            form.BackgroundProcess.RunWorkerAsync();
-
-            form.ShowDialog();
-            while(form.BackgroundProcess.IsBusy)
-            {
-
-            }
-            //form.Close();
-            
         }
+
+        [CommandMethod("START")]
+        public void start()
+        {
+            ProgressBar_Dialog.StartForm form = new ProgressBar_Dialog.StartForm();
+            form.ShowDialog();
+        }
+
     }
 }

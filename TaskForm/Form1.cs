@@ -10,42 +10,42 @@ namespace ProgressBar_TaskForm
 {
     public partial class Form1 : Form
     {
-        public BackgroundWorker BackgroundProcess;
 
         public Form1()
         {
             InitializeComponent();
 
-            this.BackgroundProcess = backgroundWorker;
+            // Enable progress reporting
+            backgroundWorker.WorkerReportsProgress = true;
+
+            // Hook up event handlers
+            backgroundWorker.DoWork += backgroundWorker_DoWork;
+            backgroundWorker.RunWorkerCompleted += backgroundWorker_RunWorkerCompleted;
+            backgroundWorker.ProgressChanged += backgroundWorker_ProgressChanged;
 
             label1.Text = "";
-
-            progressBar1.Maximum = 100;
-            progressBar1.Step = 1;
-            progressBar1.Value = 1;
-            //backgroundWorker.RunWorkerAsync();
+            this.Show();
+            backgroundWorker.RunWorkerAsync(100);
         }
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             var backgroundWorker = sender as BackgroundWorker;
-            for (int j = 0; j < 100; j++)
+            long result = 0;
+            for (int i = 0; i < 100; i++)
             {
-                Thread.Sleep(5);
-                Document doc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
-                doc.Editor.WriteMessage("\n Lauf:" + j);
-                //while (this.backgroundWorker.IsBusy)
-                //{
-                //}
-
-                backgroundWorker.ReportProgress(j);
+                result += i;
+                int percent = i;
+                Thread.Sleep(20);
+                backgroundWorker.ReportProgress(percent, i);
             }
+            e.Result = result;
         }
 
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-            label1.Text = progressBar1.Value.ToString();
+            label1.Text = progressBar1.Value.ToString() + "%";
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -54,6 +54,13 @@ namespace ProgressBar_TaskForm
             label1.Text = "Complete!";
             Thread.Sleep(5);
             this.Close();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
+
         }
     }
 }
